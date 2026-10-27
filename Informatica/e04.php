@@ -12,10 +12,10 @@
             if(isset($_GET['scelta'])){
                 switch($_GET['scelta']){
                     case "calcola":{
-                        $r = $_GET['Raggio'];
+                        $r = $_GET['inputRaggio'];
                       
                         $circonfereza = 2 * 3.14 * $r;
-                        $are = 3.14 * $r * $r;  // $r*$r -> pow($r, 2);
+                        $area = 3.14 * $r * $r;  // $r*$r -> pow($r, 2);
 
                         echo('Circonfereza: '.$circonfereza.'<br />');
                         echo('Area: '.$area.'<br />');
