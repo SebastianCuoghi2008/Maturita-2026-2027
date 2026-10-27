@@ -12,11 +12,14 @@
             if(isset($_GET['scelta'])){
                 switch($_GET['scelta']){
                     case "calcola":{
-                        $a = $_GET['Raggio'];
-                        $b = 2 *(3.14 * $a);
+                        $r = $_GET['Raggio'];
+                      
+                        $circonfereza = 2 * 3.14 * $r;
+                        $are = 3.14 * $r * $r;  // $r*$r -> pow($r, 2);
 
-                        
-                       
+                        echo('Circonfereza: '.$circonfereza.'<br />');
+                        echo('Area: '.$area.'<br />');
+
                         echo('<a href="e04.php">Torna al form...</a>');
                         break;
                     }
@@ -25,13 +28,13 @@
             else{
                 echo('<div class="container-fluid">
                     <h1>Form Inserisci il raggio</h1>
-                    <form action="e03.php" method="get">
+                    <form action="e04.php" method="get">
                         <div class="mb-3">
-                            <label for="inputA" class="form-label">Inserisci valore A:</label>
-                            <input class="form-control form-control-lg" type="text" name="inputA" id="inputA" placeholder="Valore di A" aria-label="default input example">
+                            <label for="inputRaggo" class="form-label">Inserisci il raggio:</label>
+                            <input class="form-control form-control-lg" type="text" name="inputRaggio" id="inputRaggio" placeholder="Valore del raggio" aria-label="default input example">
                         </div>
                         <input type="hidden" name="scelta" id="scelta" value="calcola">
-                        <button class="btn btn-success" type="submit">Inoltra il Form</button>
+                        <button class="btn btn-success" type="submit">Calcola area e circonferenza</button>
                     </form>            
                 </div>');
             }
