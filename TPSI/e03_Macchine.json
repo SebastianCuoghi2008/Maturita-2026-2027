@@ -1,0 +1,59 @@
+[
+    {
+        "Marca": "BMW",
+        "Modello": "Serie 5",
+        "Anno Immatricolazione": 2009,
+        "Provincia": "Sermide",
+        "Uniproprietario": true,
+        "Kilometraggio": 350000
+    },
+    {
+        "Marca": "Alfa Romeo",
+        "Modello": "Serie 105",
+        "Anno Immatricolazione": 1990,
+        "Provincia": "Modena",
+        "Uniproprietario": true,
+        "Kilometraggio": 80000
+    },
+    {
+        "Marca": "Audi",
+        "Modello": "RS6",
+        "Anno Immatricolazione": 2009,
+        "Provincia": "Lazio",
+        "Uniproprietario": false,
+        "Kilometraggio": 200000
+    },
+    {
+        "Marca": "Fiat",
+        "Modello": "Panda",
+        "Anno Immatricolazione": 1982,
+        "Provincia": "Padova",
+        "Uniproprietario": false,
+        "Kilometraggio": 180000
+    },
+    {
+        "Marca": "Jeep",
+        "Modello": "Wrangler",
+        "Anno Immatricolazione": 2015,
+        "Provincia": "Legnago",
+        "Uniproprietario": true,
+        "Kilometraggio": 250000
+    },
+    {
+        "Marca": "Fiat",
+        "Modello": "Panda",
+        "Anno Immatricolazione": 1982,
+        "Provincia": "Padova",
+        "Uniproprietario": true,
+        "Kilometraggio": 180000
+    },
+    {
+        "Marca": "Fiat",
+        "Modello": "Panda",
+        "Anno Immatricolazione": 1982,
+        "Provincia": "Padova",
+        "Uniproprietario": true,
+        "Kilometraggio": 180000
+    }
+    
+]
