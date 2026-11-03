@@ -12,6 +12,9 @@
                     vb.innerHTML += vettArchivio[i].Marca + " " + vettArchivio[i].Modello + " " + vettArchivio[i].Anno_immatricolazione + " " + vettArchivio[i].Provincia + " " + vettArchivio[i].Uniproprietario + " " + vettArchivio[i].Kilometraggio +  "<br />";
                 }
             }
+            
+            let btnCaricaTutto = document.querySelector("#btnCaricaJSON");
+            btnCaricaTutto.addEventListener('click', LeggiArchivio);
         </script>
     </head>
     <body>
