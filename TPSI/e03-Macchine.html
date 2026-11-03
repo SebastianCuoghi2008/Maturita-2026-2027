@@ -7,9 +7,7 @@
  -->
 <html>
     <head>
-        <title>Prova rubrica json</title>
-    </head>
-    <body>
+        <title>Archivio di macchine</title>
         <button id="btnCaricaJSON">Carica Intera Lista</button>
         <br /><br />
         Et&agrave; minima: <input type="text" id="anniRichiesti">
@@ -18,30 +16,20 @@
         <div id="viewBox" style="border: solid 1px rgb(200,0,0);">Seleziona una opzione</div>
 
         <script>
-            async function leggiRubrica(){
-                //alert("Leggo....");
-                /* Viene eseguita una richiesta http al server per la risorsa rubrica.json,
-                il contenuto viene restituito al browser sottoforma di promessa (un insieme di dati ancora inutilizzabile)
-                */
+            async function LeggiArchivio(){
                 const promise = await fetch("e03_Macchine.json");
-                /*  Per utilizzare i dati ricevuto devo farne il "parsing"/traduzione in formato JSON.
-                    se il parsing ha esito positivo viene creato il vettore di JSON vettRubrica.
-                */
-                const vettRubrica = await promise.json();
-
-                // imposto vb come riferimento alla viewBox dichiara nel body come div.
+                const vettArchivio = await promise.json();
                 let vb = document.querySelector("#viewBox");
-
-                vb.innerHTML = "Numero di JSON ricevuti: "+vettRubrica.length+"<br /><br />";
-
-                /*  Per scorrere un vettore utilizzo un ciclo for, ogni cella del vettore è un JSON
-                    quindi per ogni cella ho a disposizione le chiavi/attributi del json definiti nel
-                    file rubrica.json
-                */
-                for(let i=0; i < vettRubrica.length; i++){
-                    vb.innerHTML += vettRubrica[i].nome + " " + vettRubrica[i].cognome + " " + vettRubrica[i].sesso + " " + vettRubrica[i].anni + " " + vettRubrica[i].paese + "<br />";
+                vb.innerHTML = "Numero di JSON ricevuti: "+vettArchivio.length+"<br /><br />";
+                for(let i=0; i < vettArchivio.length; i++){
+                    vb.innerHTML += vettArchivio[i].Marca + " " + vettArchivio[i].Modello + " " + vettArchivio[i].Anno_immatricolazione + " " + vettArchivio[i].Provincia + " " + vettArchivio[i].Uniproprietario + " " + vettArchivio[i].Kilometraggio +  "<br />";
                 }
             }
         </script>
+    </head>
+    <body>
+        <h1>Gestionale autovetture</h1>
+        <button id = "btnCaricaJSON">Carica tutto</button>
+        <button id = "btnUniproprietario">Carica solo l'Uniproprietario</button>
     </body>
 </html>
